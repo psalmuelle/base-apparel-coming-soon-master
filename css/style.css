@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+/* Mobile-first design.  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  color: hsl(0, 36%, 70%);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  background: url("../images/bg-pattern-desktop.svg"),
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+section {
+  height: fit-content;
+  overflow: hidden;
+
+  margin-top: 5rem;
+}
+section img {
+  display: block;
+}
+.logo {
+  position: absolute;
+  top: 4%;
+  left: 8%;
+  width: 6.4rem;
+  height: 1.3rem;
+}
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#desktop-img {
+  display: none;
+}
+
+header {
+  margin: 4rem 0 4rem 0;
+  padding: 0 2rem 0 2rem;
+  text-align: center;
+}
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  color: hsl(0, 6%, 24%);
+}
+#we-are {
+  font-weight: lighter;
+}
+p {
+  line-height: 1.4rem;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+}
+.form {
+  position: relative;
+
+  width: 100%;
+}
+input {
+  display: block;
+  margin-top: 2rem;
+  height: 2.9rem;
+  width: 100%;
+  border-radius: 6rem;
+  border: 0.1px solid hsl(0, 36%, 70%);
+  padding-left: 2rem;
+  font-weight: 600;
+  position: relative;
+}
+input:focus {
+  outline: 0;
+  border: 1px solid red;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.9rem;
+  width: 3.7rem;
+  border-radius: 2rem;
+  border: 0;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+  top: 1%;
+  right: 0;
+  position: absolute;
+
+  box-shadow: 6px 11px 27px -10px rgba(65, 58, 58, 0.75);
+  -webkit-box-shadow: 6px 11px 27px -10px rgba(65, 58, 58, 0.75);
+  -moz-box-shadow: 6px 11px 27px -10px rgba(65, 58, 58, 0.75);
+}
+button img {
+  display: block;
+}
+
+#icon--warning {
+  position: absolute;
+  top: 14%;
+  right: 26%;
+  visibility: hidden;
+}
+#notice {
+  visibility: hidden;
+  margin-top: 0;
+  color: hsl(0, 93%, 68%);
+  font-size: 14px;
+
+  text-align: center;
+}
+
+.visible {
+  visibility: visible;
+}
+
+/* Screen sizes above 375px. Did this because of the mobile image! */
+
+@media screen and (min-width: 377px) {
+  body {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  }
+  main {
+    width: 375px;
+    margin: 0 auto;
+  }
+}
+
+/* Medium-sized screens, e.g tablets */
+
+
+
+@media screen and (min-width: 700px) {
+  #mobile-img {
+    display: none;
+  }
+  #desktop-img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+    height: 30rem;
+  }
+  main {
+    width: 100%;
+  }
+  header {
+    width: 450px;
+    margin: 4rem auto;
+    margin-bottom: 6rem;
+  }
+  .logo {
+    top: 5%;
+    left: 10%;
+  }
+
+  #notice {
+    margin: 0 2rem;
+    text-align: left;
+  }
+}
+
+/* Desktop size screens  */
+@media screen and (min-width: 1236px) {
+  main {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  #desktop-img {
+    height: max-content;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .logo {
+    top: 10.5%;
+    left: 11.5%;
+    width: 10rem;
+    height: 2rem;
+  }
+
+  header {
+    margin: 0;
+    margin-top: 14rem;
+    margin-left: 11.5%;
+    padding: 0;
+    text-align: left;
+  }
+  h1 {
+    font-size: 4rem;
+    letter-spacing: 0.8rem;
+  }
+  #we-are {
+    font-size: 3.6rem;
+  }
+  p {
+    line-height: 1.6rem;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  input {
+    margin-top: 2.5rem;
+    height: 3.2rem;
+  }
+  button {
+    width: 6.5rem;
+    height: 3.2rem;
+  }
+  button:hover {
+    cursor: pointer;
+    background: linear-gradient(
+      135deg,
+      hsla(0, 80%, 86%, 0.9),
+      hsla(0, 74%, 74%, 0.9)
+    );
+  }
+  button:active {
+    background: linear-gradient(
+      135deg,
+      hsla(0, 80%, 86%, 0.8),
+      hsla(0, 74%, 74%, 0.8)
+    );
+  }
+  #icon--warning {
+    right: 30%;
+  }
+  .attribution {
+    position: absolute;
+    top: 0;
+  }
+}
+
+  /*
+    Thanks to frontend mentor
+   
+    */
